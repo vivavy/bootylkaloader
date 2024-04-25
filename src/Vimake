@@ -1,0 +1,16 @@
+#!/bin/env vimake
+---  # this file is just Vi Make wrapper around GNU Make
+module: main
+version: <POCOM_PUT_VERSION_HERE>
+# autoimpls useless due to difference of architectures
+# autoimps:
+impls:
+  x86_64:
+    params:
+      bitness: 64
+    deps: []  # POCOM FILL THIS LIST
+    actions:
+      build:
+        commands:
+          - - make all
+# POCOM if you want you can set up RUN or DEBUG actions, but note that they are runs automatically!
